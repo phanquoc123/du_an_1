@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+header{
+    background-color: #FEF4DF;
+   
+}
+
+
+.list_danhmuc li{
+    display: inline-block;
+    list-style: none;
+    padding-right: 50px;
+    padding-left: 30px;
+    font-size: larger;
+    
+}
+.list_danhmuc ul li a{
+    text-decoration: none;
+    color: #2A2A86;
+    margin-bottom: 5px;
+   position: relative;
+}
+.list_danhmuc ul li a::after {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    content: '';
+    height: 2px;
+    background-color: #ffc107; /* Change to your desired color */
+    bottom: -5px; /* Position at the bottom */
+    left: 0; /* Align with the left edge of the text */
+    transform: scaleX(0); /* Initially hidden */
+    transition: transform 0.3s ease-in-out; /* Add transition effect */
+  }
+
+.list_danhmuc ul li a:hover::after {
+  
+    transform: scaleX(1); /* Show underline on hover */
+  }
+
+main{
+
+    padding-left: 25px;
+    padding-right: 25px;
+    
+}
+.header_tren{
+    display: flex;
+    
+}
+.logo{
+    padding: 20px 0px;
+}
+.search{
+    padding-top: 23px;
+    
+    width: 600px;
+    margin-left: 30px;
+}
+.search form input[type="text"]{
+    width: 350px;
+    height: 40px;
+    border-radius: 10px 0px 0px 10px;
+    border-color: white;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+}
+.search form input[type="text"]:hover{
+  
+     border: 1px solid #F7AC17;
+    border-radius: 10px 0px 0px 10px;
+}
+.search form input[type="submit"]{
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #F7AC17;
+}
+.SDT{
+    padding-top: 27px;
+    color: #2A2A86;
+}
+
+.slide_show img{
+    width: 100%;
+    height: 500px;
+   object-fit: cover;
+}
+.container{
+    max-width: 1200px;
+}
+.san_pham_tong{
+    width: 100%;
+    margin-top: 20px;
+}
+.product{
+    text-align: center;
+}
+.product img {
+    width: 250px;
+    margin-bottom: 10px;
+  
+}
+.product img:hover {
+    
+   transform: scale(1.1);
+   transition-property: transition;
+  
+}
+.item{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    
+}
+.chay_hang{
+    border: 1px solid black;
+    background-color:  #F23601;
+    background-image: linear-gradient(to right , #F23601, #F7AC17 );
+    border-width: 100%;
+    color: white;
+    border-radius: 10px;
+    padding: 3px 50px;
+}
+.BST{
+    display: flex;
+    margin-top: 30px;
+}
+.item_BST{
+    width: 30,8%;
+}
+.BST img{
+   width: 370px;
+   height: 180px;
+}
+footer{
+    margin-top: 20px;
+    background-color: blue;
+}

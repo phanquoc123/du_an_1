@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header{
+    background-color: palevioletred;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+.danh_muc{
+position: absolute;
+bottom: 0px;
+left: 300px;
+
+}
+.danh_muc ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 0px 20px;
+}
+.danh_muc ul li a{
+   text-decoration: none;
+   color: #2A2A86;
+   position: relative;
+}
+.danh_muc ul li a::after {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    content: '';
+    height: 2px;
+    background-color: #ffc107; /* Change to your desired color */
+    bottom: -5px; /* Position at the bottom */
+    left: 0; /* Align with the left edge of the text */
+    transform: scaleX(0); /* Initially hidden */
+    transition: transform 0.3s ease-in-out; /* Add transition effect */
+  }
+
+  .danh_muc ul li a:hover::after {
+  
+    transform: scaleX(1); /* Show underline on hover */
+  }
+main{
+    margin-top: 10px;
+}
+main h3{
+    background-color: #FABBB0;
+    color: blue;
+    line-height: 50px;
+}
+.form_add_danhmuc{
+    margin-top: 20px;
+    background-color: blue;
+    padding: 10px 20px;
+}
+.form_add_danhmuc form input[type="text"]{
+    width: 50%;
+    height: 30px;
+    margin: 5px 0px;
+    border-radius: 5px;
+    
+    outline: none;
+}
+.form_add_danhmuc form input[type="text"]:hover{
+    width: 50%;
+    height: 30px;
+    margin: 5px 0px;
+    border: 1px solid yellow;
+    outline: none;
+}
+.form_add_danhmuc form input[type="text"]:focus{
+    width: 50%;
+    height: 30px;
+    margin: 5px 0px;
+    border: 1px solid yellow;
+    outline: none;
+}
+.form_add_danhmuc form input[type="submit"]{
+    width: 10%;
+    height: 30px;
+    margin: 5px 0px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffc107;
+}
+.form_add_danhmuc form input[type="submit"]:hover{
+    width: 10%;
+    height: 30px;
+    margin: 5px 0px;
+    border-radius: 10px;
+    background-color: orangered;
+    border-color: brown;
+
+}
+.form_add_danhmuc input[type="button"]{
+    width: 10%;
+    height: 30px;
+    margin: 5px 0px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffc107;
+}
+.form_add_danhmuc  input[type="button"]:hover{
+    width: 10%;
+    height: 30px;
+    margin: 5px 0px;
+    border-radius: 10px;
+    background-color: orangered;
+    border-color: brown;
+
+}
+
+

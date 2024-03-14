@@ -1,3 +1,3 @@
 <?php 
- echo "xi n chào mọi người";
+ echo "xi n chào mgọi người";
 ?>

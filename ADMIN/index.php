@@ -26,6 +26,31 @@ if(isset($_GET['act'])){
                 }
                 include 'danhmuc/add.php';
                 break;
+            case 'sua_danhmuc':
+                if(isset($_GET['id']) && ($_GET['id']) > 0){
+                    $list_one_category = show_one_category($_GET['id']);
+                }
+                
+                include 'danhmuc/update.php';
+                break; 
+
+            case 'update_danhmuc':
+                if(isset($_POST['btn_submit']) && ($_POST['btn_submit'])){
+                    $id_category = $_POST['id_category'];
+                    $name_category = $_POST['name_category'];
+                    update_category($id_category,$name_category);
+                    // if($name_category!=""){
+                        
+                    // }else{
+                    //     $thongbao_loi = "Không được để trống";
+                    // }
+                   
+                   
+                }
+                $list_category = show_all_category();
+                include 'danhmuc/list.php';
+                break;
+
             case 'delete_danhmuc':
                 if(isset($_GET['id']) && ($_GET['id']) > 0){
                     delete_category($_GET['id']);

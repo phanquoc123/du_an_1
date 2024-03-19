@@ -130,12 +130,17 @@ main{
     border-radius: 10px;
     padding: 3px 50px;
 }
+
+
+
+
+
 .BST{
     display: flex;
     margin-top: 30px;
 }
 .item_BST{
-    width: 30,8%;
+    width: 100%;
 }
 .BST img{
    width: 370px;

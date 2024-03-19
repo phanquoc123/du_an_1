@@ -2,6 +2,8 @@
 include 'header.php';
 include '../model/pdo.php';
 include '../model/danhmuc.php';
+include '../model/sanpham.php';
+
 
 
 if(isset($_GET['act'])){
@@ -39,12 +41,6 @@ if(isset($_GET['act'])){
                     $id_category = $_POST['id_category'];
                     $name_category = $_POST['name_category'];
                     update_category($id_category,$name_category);
-                    // if($name_category!=""){
-                        
-                    // }else{
-                    //     $thongbao_loi = "Không được để trống";
-                    // }
-                   
                    
                 }
                 $list_category = show_all_category();
@@ -58,6 +54,55 @@ if(isset($_GET['act'])){
                 $list_category = show_all_category();
                 include 'danhmuc/list.php';
                 break;
+ //////////////////// HỂT PHẦN DANH MỤC ////////////////////
+ /////////////////// PHẦN SẢN PHẨM //////////////////
+             case 'list_sanpham':
+                $list_product = show_all_product();
+                include 'sanpham/list.php';
+                break;
+                case 'add_sanpham':
+                    if(isset($_POST['btn_submit']) && ($_POST['btn_submit']) ){
+
+                        $id_category = $_POST['id_category'];
+                        $name_product = $_POST['name_product'];
+                        $price = $_POST['price'];
+                        $description = $_POST['description'];
+                        $quantity = $_POST['quantity'];
+                        $image = $_FILES['hinh_anh']['name'];
+                        $targer_dir = "../upload/";
+                        $targer_file = $targer_dir . basename($_FILES["hinh_anh"]["name"]);
+                        if (move_uploaded_file($_FILES["hinh_anh"]["tmp_name"],$targer_file)) {
+                            // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                          } else {
+                            // echo "Sorry, there was an error uploading your file.";
+                          }
+        
+                          add_product($name_product,$price,$image,$description,$quantity,$id_category);
+                        
+                    }
+                    $list_category = show_all_category();
+                    include 'sanpham/add.php';
+                    break;
+
+                    case 'delete_sanpham':
+                        if(isset($_GET['id']) && ($_GET['id']) > 0){
+                        
+                            delete_product($_GET['id']);
+                        }
+                        $list_product = show_all_product();
+                        include 'danhmuc/list.php';
+                        break;
+                        case 'sua_sanpham':
+                            if(isset($_GET['id']) && ($_GET['id']) > 0){
+                               
+                                $list_one_product= show_one_product($_GET['id']);
+                            }
+                            $list_category = show_all_category();
+                            include 'danhmuc/update.php';
+                            break;
+
+
+            
     }
 }else{
    include 'main.php'; 

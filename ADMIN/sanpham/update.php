@@ -11,34 +11,58 @@
   <input type="text" name="name_category" id="">
     </form> -->
     <?php
-    if(is_array($list_one_category)){
-        extract($list_one_category);
+    if(is_array($list_one_product)){
+        extract($list_one_product);
+    }
+    $hinhpath = "../upload/".$image;
+
+    if(is_file($hinhpath)){
+        $hinh_anh = "<img src='".$hinhpath."' height='80' width='80' >";
+    }else{
+        $hinh_anh = "No photo";
     }
     ?>
-    <form method="post" action="index.php?act=update_danhmuc">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Mã danh mục</label>
-    <input type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp" disabled placeholder="Mã danh mục" value="<?= $list_one_category['id_category'] ?>" >
-    <input type="hidden" name="id_category" value="<?= $list_one_category['id_category'] ?>" >
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Tên danh mục</label>
-    <input type="text" name="name_category" class="form-control" id="exampleInputPassword1" value="<?= $list_one_category['name_category'] ?>">
+    <form method="post" action="index.php?act=update_sanpham">
+    <select class="form-select" name="id_category" aria-label="Default select example">
+        <option selected>Tất cả</option>
+        <?php foreach($list_category as $item) {
+                  extract($item) ?>
+           <?php if($list_one_product['id_category'] == $item['id_category']) { ?>
+             <option value="<?=$item['id_category']?>" selected><?= $item['name_category'] ?></option>
+             <?php } else { ?> 
+              <option value="<?=$item['id_category']?>"><?= $item['name_category'] ?></option>
+            <?php }?>
+         
+        <?php } ?>
+</select>
+  <input type="hidden" name="id_product" value="<?= $list_one_product['id_product'] ?>">
+<div class="form-group">
+    <label for="exampleInputPassword1">Tên sản phẩm</label>
+    <input type="text" name="name_product" value="<?= $list_one_product['name_product'] ?>" class="form-control" id="exampleInputPassword1" >
+  
+  </div> <br>
+  <div class="input-group mb-3">
     
-    <?php
-   
-    if(isset($thongbao) && $thongbao!=""){
-        echo "<p style='color: green;'>$thongbao</p>";
-    }
-    if(isset($thongbao_loi) && $thongbao_loi!=""){
-      echo "<p style='color: red;'>$thongbao_loi</p>";
-  }
-    ?>
+      <input type="file" name="hinh_anh" class="form-control" id="inputGroupFile02">
+      <?=$hinh_anh?>
+    </div> <br>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Đơn giá</label>
+    <input type="text" name="price" value="<?= $list_one_product['price'] ?>" class="form-control" id="exampleInputPassword1" >
+  
+  </div> <br>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Số lượng</label>
+    <input type="text" name="quantity" value="<?= $list_one_product['quantity'] ?>" class="form-control" id="exampleInputPassword1" >
     
   </div> <br>
+  <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Mô tả</label>
+  <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"><?= $list_one_product['description']  ?></textarea>
+</div> <br>
   
   <input id="nut_them" name="btn_submit"  type="submit" value="Cập nhật ">
-  <a href="index.php?act=list_danhmuc"><input id="nut_danhsach"  type="button" value="Danh sách"></a>
+  <a href="index.php?act=list_sanpham"><input id="nut_danhsach"  type="button" value="Danh sách"></a>
 </form>
   
    

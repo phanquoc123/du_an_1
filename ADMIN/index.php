@@ -61,6 +61,7 @@ if(isset($_GET['act'])){
                 include 'sanpham/list.php';
                 break;
                 case 'add_sanpham':
+                    $error =[];
                     if(isset($_POST['btn_submit']) && ($_POST['btn_submit']) ){
 
                         $id_category = $_POST['id_category'];
@@ -76,7 +77,9 @@ if(isset($_GET['act'])){
                           } else {
                             // echo "Sorry, there was an error uploading your file.";
                           }
-        
+                        // if($name_product=""){
+                        //     $error = "Không được để trống";
+                        // }
                           add_product($name_product,$price,$image,$description,$quantity,$id_category);
                         
                     }
@@ -98,9 +101,35 @@ if(isset($_GET['act'])){
                                 $list_one_product= show_one_product($_GET['id']);
                             }
                             $list_category = show_all_category();
-                            include 'danhmuc/update.php';
+                            include 'sanpham/update.php';
                             break;
 
+                            case 'update_sanpham':
+                                if(isset($_POST['btn_submit']) && ($_POST['btn_submit']) ){
+            
+                                    $id_category = $_POST['id_category'];
+                                    $id_product = $_POST['id_product'];
+                                    $name_product = $_POST['name_product'];
+                                    $price = $_POST['price'];
+                                    $description = $_POST['description'];
+                                    $quantity = $_POST['quantity'];
+                                    $image = $_FILES['hinh_anh']['name'];
+                                    $targer_dir = "../upload/";
+                                    $targer_file = $targer_dir . basename($_FILES["hinh_anh"]["name"]);
+                                    if (move_uploaded_file($_FILES["hinh_anh"]["tmp_name"],$targer_file)) {
+                                        // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                                      } else {
+                                        // echo "Sorry, there was an error uploading your file.";
+                                      }
+                    
+                                      update_product($id_product,$name_product,$price,$image,$description,$quantity,$id_category);
+                                    
+                                }
+                                $list_category = show_all_category();
+                                $list_product = show_all_product();
+                                include 'sanpham/list.php';
+                                break;
+                  
 
             
     }

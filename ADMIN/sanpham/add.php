@@ -24,7 +24,7 @@
   <div class="form-group">
     <label for="exampleInputPassword1">Tên sản phẩm</label>
     <input type="text" name="name_product" class="form-control" id="exampleInputPassword1" >
-  
+    
   </div> <br>
   <div class="input-group mb-3">
     
@@ -45,16 +45,6 @@
   <label for="exampleFormControlTextarea1" class="form-label">Mô tả</label>
   <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div> <br>
-  
-  <?php
-   
-    if(isset($thongbao) && $thongbao!=""){
-        echo "<p style='color: green;'>$thongbao</p>";
-    }
-    if(isset($thongbao_loi) && $thongbao_loi!=""){
-      echo "<p style='color: red;'>$thongbao_loi</p>";
-  }
-    ?>
   
   <input id="nut_them" name="btn_submit"  type="submit" value="Thêm">
   <a href="index.php?act=list_sanpham"><input id="nut_danhsach"  type="button" value="Danh sách"></a>

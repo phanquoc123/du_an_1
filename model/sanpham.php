@@ -1,6 +1,6 @@
 <?php
 function show_all_product(){
-    $sql = "SELECT * FROM `product` WHERE 1";
+    $sql = "SELECT * FROM `product` JOIN `category` ON product.id_category = category.id_category WHERE 1";
     $list_product = pdo_query($sql);
     return $list_product;
 }

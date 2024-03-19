@@ -22,7 +22,7 @@
         $hinh_anh = "No photo";
     }
     ?>
-    <form method="post" action="index.php?act=update_sanpham">
+    <form method="post" action="index.php?act=update_sanpham" enctype="multipart/form-data">
     <select class="form-select" name="id_category" aria-label="Default select example">
         <option selected>Tất cả</option>
         <?php foreach($list_category as $item) {
@@ -44,8 +44,11 @@
   <div class="input-group mb-3">
     
       <input type="file" name="hinh_anh" class="form-control" id="inputGroupFile02">
-      <?=$hinh_anh?>
-    </div> <br>
+     
+    </div> 
+    <div>
+       <?=$hinh_anh?>
+    </div><br>
   <div class="form-group">
     <label for="exampleInputPassword1">Đơn giá</label>
     <input type="text" name="price" value="<?= $list_one_product['price'] ?>" class="form-control" id="exampleInputPassword1" >

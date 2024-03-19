@@ -8,6 +8,9 @@ if(isset($_GET['act'])){
         case 'chitiet_sanpham':
             include 'chitietsanpham.php';
             break;
+        case 'sanpham_tungloai':
+            include 'sanphamtheoloai.php';
+            break;
     }
 }else{
     include 'slide_show.php';

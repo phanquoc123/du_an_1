@@ -140,12 +140,8 @@ main{
     margin-top: 30px;
 }
 .item_BST{
-<<<<<<< HEAD
+
     width: 100%;
-=======
-    width: 30,8%;
-    
->>>>>>> f42f308b819933f77a8b612e1e7d7b8c44f0f638
 }
 .BST img{
    width: 100%;
@@ -154,4 +150,69 @@ main{
 footer{
     margin-top: 20px;
     background-color: blue;
+}
+
+/* spchi tiết */
+.td_sp{
+    text-align: center;
+    text-transform: uppercase;
+    color: orange;
+}
+.header_sp{
+    padding: 20px;
+    margin-left: 40px;
+    text-align: center;
+    
+}
+.header_sp button:nth-child(1){
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:white;
+    border: 1px solid grey;
+}
+.header_sp button:nth-child(2){
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:white;
+    border: 1px solid grey;
+}
+.header_sp button:nth-child(3){
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:white;
+    border: 1px solid grey;
+    
+}
+.header_sp button:nth-child(4){
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:white;
+    border: 1px solid grey;
+}
+.header_sp button:nth-child(5){
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:white;
+    border: 1px solid grey;
+}
+.header_sp button:nth-child(6){
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:white;
+    border: 1px solid grey;
+}
+
+.header_sp button:hover:nth-child(1),
+.header_sp button:hover:nth-child(2),
+.header_sp button:hover:nth-child(3),
+.header_sp button:hover:nth-child(4),
+.header_sp button:hover:nth-child(5),
+.header_sp button:hover:nth-child(6){
+    background-color: orange;
 }

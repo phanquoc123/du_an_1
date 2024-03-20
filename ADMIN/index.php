@@ -93,7 +93,7 @@ if(isset($_GET['act'])){
                             delete_product($_GET['id']);
                         }
                         $list_product = show_all_product();
-                        include 'danhmuc/list.php';
+                        include 'sanpham/list.php';
                         break;
                         case 'sua_sanpham':
                             if(isset($_GET['id']) && ($_GET['id']) > 0){

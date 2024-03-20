@@ -12,21 +12,21 @@
       
     </div>
     <div class="product">
-      <a href=""> <img src="../img/anhsanpham2.webp" alt=""> </a>
+      <a href="index.php?act=chitiet_sanpham"> <img src="../img/anhsanpham2.webp" alt=""> </a>
       <h5>Sản phẩm 1 </h5>
       <p style="color: red;">249.000</p>
       <span class="chay_hang">Sắp cháy hàng</span>
       
     </div>
     <div class="product">
-      <a href=""> <img src="../img/anhsanpham3.webp" alt=""> </a>
+      <a href="index.php?act=chitiet_sanpham"> <img src="../img/anhsanpham3.webp" alt=""> </a>
       <h5>Sản phẩm 1 </h5>
       <p style="color: red;">249.000</p>
       <span class="chay_hang">Sắp cháy hàng</span>
       
     </div>
     <div class="product">
-      <a href=""> <img src="../img/anhsanpham4.webp" alt=""> </a>
+      <a href="index.php?act=chitiet_sanpham"> <img src="../img/anhsanpham4.webp" alt=""> </a>
       <h5>Sản phẩm 1 </h5>
       <p style="color: red;">249.000</p>
       <span class="chay_hang">Sắp cháy hàng</span>
@@ -36,28 +36,28 @@
    <h5 style="color:  #2A2A86;">POLO-Ngăn mùi hiệu quả</h5>
    <div class="item">
     <div class="product">
-      <a href=""> <img src="../img/polo1.webp" alt=""> </a>
+      <a href="index.php?act=chitiet_sanpham"> <img src="../img/polo1.webp" alt=""> </a>
       <h5>Sản phẩm 1 </h5>
       <p style="color: red;">249.000</p>
       <span class="chay_hang">Sắp cháy hàng</span>
       
     </div>
     <div class="product">
-      <a href=""> <img src="../img/polo2.webp" alt=""> </a>
+      <a href="index.php?act=chitiet_sanpham"> <img src="../img/polo2.webp" alt=""> </a>
       <h5>Sản phẩm 1 </h5>
       <p style="color: red;">249.000</p>
       <span class="chay_hang">Sắp cháy hàng</span>
       
     </div>
     <div class="product">
-      <a href=""> <img src="../img/polo4.webp" alt=""> </a>
+      <a href="index.php?act=chitiet_sanpham"> <img src="../img/polo4.webp" alt=""> </a>
       <h5>Sản phẩm 1 </h5>
       <p style="color: red;">249.000</p>
       <span class="chay_hang">Sắp cháy hàng</span>
       
     </div>
     <div class="product">
-      <a href=""> <img src="../img/polo3.webp" alt=""> </a>
+      <a href="index.php?act=chitiet_sanpham"> <img src="../img/polo3.webp" alt=""> </a>
       <h5>Sản phẩm 1 </h5>
       <p style="color: red;">249.000</p>
       <span class="chay_hang">Sắp cháy hàng</span>

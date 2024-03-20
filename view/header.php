@@ -36,7 +36,7 @@
         <div class="hearder_duoi container">
             <div class="list_danhmuc">
              <ul>
-            <li><a href="">Nam</a></li>
+            <li><a href="index.php?act=sanpham_tungloai">Nam</a></li>
             <li><a href="">Nữ</a></li>
             <li><a href="">Trẻ em</a></li>
             <li><a href="">Liên hệ</a></li>

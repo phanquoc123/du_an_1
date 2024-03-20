@@ -131,13 +131,18 @@ main{
     border-radius: 10px;
     padding: 3px 50px;
 }
+
+
+
+
+
 .BST{
     display: flex;
     margin-top: 30px;
 }
 .item_BST{
-    width: 30,8%;
-    
+
+    width: 100%;
 }
 .BST img{
    width: 100%;
@@ -148,6 +153,7 @@ footer{
     background-color: blue;
 }
 
+<<<<<<< HEAD
 /* chi tiet san pham */
 .product-content-left{
     flex: 1;
@@ -268,4 +274,69 @@ footer{
 .product-content-right-product-icon-item i{
     font-size: 12px;
     margin-right: 6px;
+=======
+/* spchi tiết */
+.td_sp{
+    text-align: center;
+    text-transform: uppercase;
+    color: orange;
+}
+.header_sp{
+    padding: 20px;
+    margin-left: 40px;
+    text-align: center;
+    
+}
+.header_sp button:nth-child(1){
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:white;
+    border: 1px solid grey;
+}
+.header_sp button:nth-child(2){
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:white;
+    border: 1px solid grey;
+}
+.header_sp button:nth-child(3){
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:white;
+    border: 1px solid grey;
+    
+}
+.header_sp button:nth-child(4){
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:white;
+    border: 1px solid grey;
+}
+.header_sp button:nth-child(5){
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:white;
+    border: 1px solid grey;
+}
+.header_sp button:nth-child(6){
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:white;
+    border: 1px solid grey;
+}
+
+.header_sp button:hover:nth-child(1),
+.header_sp button:hover:nth-child(2),
+.header_sp button:hover:nth-child(3),
+.header_sp button:hover:nth-child(4),
+.header_sp button:hover:nth-child(5),
+.header_sp button:hover:nth-child(6){
+    background-color: orange;
+>>>>>>> 3d71b42bb6ea05bc30dda224acae00826046b143
 }

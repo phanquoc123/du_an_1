@@ -10,20 +10,20 @@
       ?>
   
       <div class="product">
-      <a href="index.php?act=chitiet_sanpham"> <img src="<?= $hinh_hienthitrangchu ?>" alt=""> </a>
+      <a href="index.php?act=chitiet_sanpham&id=<?=$list_sp_Nam['id_product']?>"> <img src="<?= $hinh_hienthitrangchu ?>" alt=""> </a>
       <h5><?= $list_sp_Nam['name_product'] ?></h5>
       <p style="color: red;"><?= $list_sp_Nam['price'] ?></p>
       <span class="chay_hang">Sắp cháy hàng</span>
       
     </div>
-<<<<<<< HEAD
+
     <?php   }  ?>
     <!-- <div class="product">
       <a href=""> <img src="../img/anhsanpham2.webp" alt=""> </a>
 =======
     <div class="product">
       <a href="index.php?act=chitiet_sanpham"> <img src="../img/anhsanpham2.webp" alt=""> </a>
->>>>>>> ecb37d948ebe7632dcb768aec85a65f0acce6792
+ ecb37d948ebe7632dcb768aec85a65f0acce6792
       <h5>Sản phẩm 1 </h5>
       <p style="color: red;">249.000</p>
       <span class="chay_hang">Sắp cháy hàng</span>
@@ -36,7 +36,7 @@
       <span class="chay_hang">Sắp cháy hàng</span>
        -->
     </div>
-<<<<<<< HEAD
+
     <!-- <div class="product">
       <a href=""> <img src="../img/anhsanpham4.webp" alt=""> </a>
 =======
@@ -56,8 +56,8 @@
       $hinh_hienthitrangchu = $img_path.$image;
       ?>
     <div class="product">
-<<<<<<< HEAD
-      <a href="index.php?act=chitiet_sanpham"> <img src="<?= $hinh_hienthitrangchu ?>" alt=""> </a>
+
+      <a href="index.php?act=chitiet_sanpham&id=<?=$list_sp_Tre_em['id_product']?>"> <img src="<?= $hinh_hienthitrangchu ?>" alt=""> </a>
       <h5><?= $list_sp_Tre_em['name_product'] ?></h5>
       <p style="color: red;"><?= $list_sp_Tre_em['price'] ?></p>
       <span class="chay_hang">Sắp cháy hàng</span>

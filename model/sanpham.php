@@ -22,11 +22,20 @@ function show_all_sp_trangchu_Tre_em()
     $list_product_trangchu =pdo_query($sql);
     return $list_product_trangchu;
 }
+
 function sanpham_theo_danhmuc($id_category)
 {
     $sql = "SELECT * FROM product WHERE id_category=" .$id_category;
     return pdo_query($sql);
 }
+
+function show_san_pham_cung_loai($id_category){
+    
+    $sql = "SELECT * FROM product WHERE id_category =".$id_category;
+    $sp = pdo_query($sql);
+    return $sp;
+}
+
 function add_product($name_product,$price,$image,$description,$quantity,$id_category){
     $sql = "INSERT INTO `product`(`name_product`, `price`, `image`, `description`, `quantity`, `id_category`) VALUES ('$name_product','$price','$image','$description','$quantity','$id_category')";
     pdo_execute($sql);

@@ -44,6 +44,17 @@ if(isset($_GET['act'])){
                 
                 break;
 
+                case 'search':
+                    if( isset($_POST['btn_search']) && $_POST['btn_search'] ){
+                        $search = $_POST['search'];
+                     
+                    }else{
+                       $search = "";
+                    }
+                    $product = search_product($search);
+                    include 'timkiemsanpham.php';
+                    break;
+
 
        default:
        include 'slide_show.php';

@@ -7,7 +7,7 @@
 <aside>
    <table>
     <tr>
-      <th>Mã sản phẩm </th>
+      <th>Mã</th>
       <th>Ảnh sản phẩm </th>
       <th>Tên sản phẩm </th>
       <th>Đơn giá </th>

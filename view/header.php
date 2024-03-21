@@ -20,9 +20,9 @@
                 <a href="index.php"><img class="logo" src="../img/logo.svg" alt=""></a>
             </div>
             <div class="search">
-                <form action="" method="post">
-                    <input type="text" placeholder="Tìm kiếm tại đây">
-                    <input type="submit" value="Tìm kiếm" >
+                <form action="index.php?act=search" method="post">
+                    <input type="text" name="search" placeholder="Tìm kiếm tại đây">
+                    <input type="submit" name="btn_search"  value="Tìm kiếm" > 
                     
                 </form>
             </div>

@@ -2,27 +2,26 @@
     <h4 class="td_sp">Đề xuất cho bạn</h4>
         <div class="header_sp">
             <button>Bán chạy nhất</button>
-            <button>Hàng mới vè</button>
-            <button>Áo</button>
-            <button>Bộ đồ nam</button>
-            <button>Đồ mặc trong</button>
-            <button>Phụ kiện</button>
+            <button>Hàng mới về </button>
+            
+            
         </div>
 
         <div class="list_sp">
             <div class="san_pham_tong">
                 <h5 style="padding-left:15px ;padding-bottom:25px ; color: #2A2A86; ">Sản phẩm mới nhất dành cho bạn </h5>
                 <div class="item">
-                    <?php foreach ($sanpham_theo_danhmuc as $sanpham_danhmuc) { 
-                         extract($sanpham_danhmuc);
+                    <?php foreach ($product as $sanpham) { 
+                         extract($sanpham);
                          $hinh_hienthitrangchu = $img_path.$image;
                         ?>
                      
                     <div class="product">
-                        <a href="index.php?act=chitiet_sanpham&id=<?= $sanpham_danhmuc['id_product'] ?>"> <img src="<?= $hinh_hienthitrangchu ?>" alt=""> </a> <br>
-                        <h8 ><?= $sanpham_danhmuc['name_product'] ?></h8>
+                        <a href="index.php?act=chitiet_sanpham&id=<?= $sanpham['id_product'] ?>"> 
+                        <img src="<?= $hinh_hienthitrangchu ?>" alt=""> </a> <br>
+                        <h8 ><?= $sanpham['name_product'] ?></h8>
                         <div>
-                            <span style="color:red;padding-right:9px"><?= $sanpham_danhmuc['price'] ?></span>
+                            <span style="color:red;padding-right:9px"><?= $sanpham['price'] ?></span>
                             <span style="color:gray ;  text-decoration: line-through;">250.000đ</span>
                         </div>
                         <span class="chay_hang">Sắp cháy hàng</span>

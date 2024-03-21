@@ -36,6 +36,16 @@ function show_san_pham_cung_loai($id_category){
     return $sp;
 }
 
+function search_product($search){
+ $sql = "SELECT * FROM product WHERE 1";
+
+ if($search!=""){
+   $sql .=" AND name_product LIKE '%".$search."%' "  ;
+ }
+ 
+ return pdo_query($sql);
+}
+
 function add_product($name_product,$price,$image,$description,$quantity,$id_category){
     $sql = "INSERT INTO `product`(`name_product`, `price`, `image`, `description`, `quantity`, `id_category`) VALUES ('$name_product','$price','$image','$description','$quantity','$id_category')";
     pdo_execute($sql);

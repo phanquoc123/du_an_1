@@ -71,16 +71,16 @@
             </div>
             <div class="product-content-right-product-icon">
                 <div class="product-content-right-product-icon-item">
-                    <i class="fas fa-phone-alt"></i> <p>Mã giảm giá sẽ hiển thị trong giỏ hàng</p>
+                <i class="fas fa-thin fa-tag"></i> <p>Mã giảm giá sẽ hiển thị trong giỏ hàng</p>
                 </div>
                 <div class="product-content-right-product-icon-item">
-                    <i class="fas fa-comments"></i> <p>Thông tin được bảo mật và mã hóa</p>
+                <i class="fas fa-thin fa-shield"></i> <p>Thông tin được bảo mật và mã hóa</p>
                 </div>
                 <div class="product-content-right-product-icon-item">
-                    <i class="fas fa-envelope"></i> <p>Giao hàng: Từ 1 - 3 ngày</p>
+                <i class="fas fa-sharp fa-thin fa-clock"></i> <p>Giao hàng: Từ 1 - 3 ngày</p>
                 </div>
                 <div class="product-content-right-product-icon-item">
-                    <i class="fas fa-envelope"></i> <p>Miễn phí đổi trả: tại 250+ cửa hàng trong 15 ngày</p>
+                    <i class="fas fa-thin fa-arrows-rotate"></i> <p>Miễn phí đổi trả: tại 250+ cửa hàng trong 15 ngày</p>
                 </div>
             </div>
         </div>

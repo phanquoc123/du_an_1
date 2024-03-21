@@ -132,10 +132,6 @@ main{
     padding: 3px 50px;
 }
 
-
-
-
-
 .BST{
     display: flex;
     margin-top: 30px;
@@ -149,7 +145,7 @@ main{
    height: 100%;
 }
 footer{
-    margin-top: 20px;
+    /* margin-top: 50px; */
     background-color: blue;
 }
 
@@ -179,7 +175,7 @@ footer{
     align-items: center;
 }
 .product-content-left-smail-img img{
-    margin-bottom: 10px; /* Khoảng cách giữa các hình ảnh nhỏ */
+    margin-bottom: 10px;                    
     width: 100%;
     align-self: flex-start;
 }

@@ -11,7 +11,7 @@
 
         <div class="list_sp">
             <div class="san_pham_tong">
-                <h5 style="padding-left:25px ;padding-bottom:25px ; color: #2A2A86; ">Áo Polo mang phong cách trẻ trung</h5>
+                <h5 style="padding-left:15px ;padding-bottom:25px ; color: #2A2A86; ">Sản phẩm mới nhất dành cho bạn </h5>
                 <div class="item">
                     <?php foreach ($sanpham_theo_danhmuc as $sanpham_danhmuc) { 
                          extract($sanpham_danhmuc);
@@ -20,7 +20,7 @@
                      
                     <div class="product">
                         <a href="index.php?act=chitiet_sanpham"> <img src="<?= $hinh_hienthitrangchu ?>" alt=""> </a> <br>
-                        <h8><?= $sanpham_danhmuc['name_product'] ?></h8>
+                        <h8 ><?= $sanpham_danhmuc['name_product'] ?></h8>
                         <div>
                             <span style="color:red;padding-right:9px"><?= $sanpham_danhmuc['price'] ?></span>
                             <span style="color:gray ;  text-decoration: line-through;">250.000đ</span>

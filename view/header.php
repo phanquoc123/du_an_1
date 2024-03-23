@@ -50,8 +50,9 @@
             <li><a href="">Trẻ em</a></li>
             <li><a href="">Liên hệ</a></li>
             <li><a href="">Blog</a></li> -->
-            <li><a href="">Giỏ hàng</a></li>
-            <li> <a href="">Đăng ký/ Đăng nhập</a></li>
+            
+            <li> <i class="fa-solid fa-cart-shopping"></i><a href="">Giỏ hàng</a></li>
+            <li>  <i class="fa-solid fa-user"></i><a href="">Đăng ký/ Đăng nhập</a></li>
            </ul>
          </div>
         

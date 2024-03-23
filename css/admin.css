@@ -15,10 +15,13 @@ header{
 article{
     background-color: rgb(122, 150, 240);
     float: left;
-   width: 25%;
+   width: 15%;
    text-align: center;
-
+   height: 600px;
    
+}
+.menu ul{
+    padding-right: 20px;
 }
 
 .menu ul li{
@@ -42,7 +45,7 @@ article{
 aside{
     
     float: right;
-    width: 75%;
+    width: 85%;
     height: 600px;
     padding-left: 10px;
     padding-top: 10px;

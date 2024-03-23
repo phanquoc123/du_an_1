@@ -7,7 +7,7 @@
 <aside>
    <table>
     <tr>
-      <th>Mã sản phẩm </th>
+      <th>Mã</th>
       <th>Ảnh sản phẩm </th>
       <th>Tên sản phẩm </th>
       <th>Đơn giá </th>
@@ -37,7 +37,7 @@
       <td><?=$list_pro['name_category']?></td>
       
       <td><a href="index.php?act=sua_sanpham&id=<?=$id_product?>"><input id="nut_sua" type="button" value="Sửa"></a> 
-       <a onclick="return confirm('Có chắc muốn xóa không')" href="index.php?act=delete_danhmuc&id=<?=$id_product?>"><input id="nut_xoa" type="button" value="Xóa"></a></td>
+       <a onclick="return confirm('Có chắc muốn xóa không')" href="index.php?act=delete_sanpham&id=<?=$id_product?>"><input id="nut_xoa" type="button" value="Xóa"></a></td>
     </tr>
     <?php  } ?>
 

@@ -1,5 +1,5 @@
 
-<body>
+<div class="all">
     <div class="container">
         <div id="wrapper">
             <form action="" id="form-login">
@@ -19,10 +19,10 @@
                     </div>
                 </div>
                 <input type="submit" value="Đăng nhập" class="form-submit">
-                <p class="forgot">
+                <h6 class="forgot">
                     <a class="d-none d-md-block" href="#">Quên mật khẩu</a>
-                </p>
-                <p>Hoặc đăng nhập bằng</p>
+</h6>
+                <h6>Hoặc đăng nhập bằng</h6>
                 <div class="d-flex justify-content-center page-signup-social-wrapper">
             
                     <div class="page-signup-social">
@@ -40,5 +40,5 @@
             </form>
         </div>
     </div>
-    </body>
+</div>
    

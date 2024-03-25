@@ -1,6 +1,6 @@
 
 
-<body>
+<div class="all">
     <div class="container">
         <div id="wrapper">
             <form action="" id="form-login">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <input type="submit" value="Đăng nhập" class="form-submit">
-                <p>Hoặc đăng kí bằng</p>
+                <h6>Hoặc đăng kí bằng</h6>
                 <div class="d-flex justify-content-center page-signup-social-wrapper">
             
                     <div class="page-signup-social">
@@ -45,7 +45,7 @@
 
             </form>
         </div>
-        </div>
+    </div>
         
-    </body>
+</div>
     

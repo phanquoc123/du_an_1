@@ -59,15 +59,15 @@ if(isset($_GET['act'])){
                     include 'timkiemsanpham.php';
                     break;
 
-                    case 'dangky':
+                case 'dangky':
                         
-                        include 'dangky.php';
-                        break;
+                    include 'dangky.php';
+                    break;
 
-                        case 'dangnhap':
+                case 'dangnhap':
                         
-                            include 'dangnhap.php';
-                            break;
+                    include 'dangnhap.php';
+                    break;
 
 
        default:

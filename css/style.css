@@ -343,6 +343,7 @@ footer{
 .cart{
     display: flex;
     grid-template-columns: 1fr 1fr 1fr ;
+    padding-bottom: 30px;
     
 }
 .cart .card-jt{

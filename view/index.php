@@ -59,6 +59,16 @@ if(isset($_GET['act'])){
                     include 'timkiemsanpham.php';
                     break;
 
+                    case 'dangky':
+                        
+                        include 'dangky.php';
+                        break;
+
+                        case 'dangnhap':
+                        
+                            include 'dangnhap.php';
+                            break;
+
 
        default:
        include 'slide_show.php';

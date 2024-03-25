@@ -135,6 +135,7 @@ main{
 .BST{
     display: flex;
     margin-top: 30px;
+    padding-bottom: 20px;
 }
 .item_BST{
 
@@ -337,3 +338,24 @@ footer{
     background-color: orange;
 
 }
+
+/* blog */
+.cart{
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr ;
+    
+}
+.cart .card-jt{
+    border: 1px solid gray;
+    margin: 0 10px;
+    
+}
+.cart .card-jt .card-jt-blog img{
+    width: 100%;
+   
+}
+.cart .card-jt .card-jt-content{
+    margin: 10px;
+}
+
+/* sp-quan */

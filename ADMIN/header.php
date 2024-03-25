@@ -24,6 +24,8 @@
  <ul>
   <li><a href="index.php?act=list_danhmuc">DANH MỤC SẢN PHẨM </a></li>
   <li><a href="index.php?act=list_sanpham">SẢN PHẨM </a></li>
+  <li><a href="index.php?act=list_color">CÁC MÀU </a></li>
+  <li><a href="index.php?act=list_size">SIZE</a></li>
   <li><a href="index.php?act=list_taikhoan">TÀI KHOẢN </a></li>
   <li><a href="index.php?act=list_binhluan">BÌNH LUẬN</a></li>
   <li><a href="index.php?act=list_thongke">THỐNG KÊ</a></li>

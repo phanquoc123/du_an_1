@@ -1,3 +1,4 @@
+
 </body>
 </html>
 <!DOCTYPE html>
@@ -9,7 +10,7 @@
     <!-- Nhúng thư viện bootstrap vào html -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../view/style.css">
+    <link rel="stylesheet" href="../css/dangnhap.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
 <body>
@@ -59,4 +60,4 @@
         </div>
         
     </body>
-    <style>
+    

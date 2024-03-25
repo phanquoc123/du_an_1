@@ -37,10 +37,18 @@
             <div class="product-content-right-product-color">
                 <p><span style="font-weight: bold;">Màu sắc: </span>Xanh nhạt <span style="color: red;">*</span></p> 
                 <div class="product-content-right-product-color-imgs">
+                    <?php foreach($list_color as $color )   { 
+                        extract($color);
+                        $hinh_mau = $img_path.$image_color;
+                        
+                      ?>
+              
                     <div class="product-content-right-product-color-img">
-                        <img src="../img/anhmau.jpg" alt="">
+                        <img src="<?= $hinh_mau ?>" alt="">
                     </div>
-                    <div class="product-content-right-product-color-img">
+                    
+                    <?php    } ?>
+                    <!-- <div class="product-content-right-product-color-img">
                         <img src="../img/anhmau2.jpg" alt="">
                     </div>
                     <div class="product-content-right-product-color-img">
@@ -51,17 +59,22 @@
                     </div>  
                     <div class="product-content-right-product-color-img">
                         <img src="../img/anhmau5.jpg" alt="">
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
             <div class="product-content-right-product-size">
                 <p style="font-weight: bold;">Size</p>
-                <span><p>S</p></span>
-                <span><p>M</p></span>
+                <?php foreach ($list_size as $size) {
+          extract($size);
+                ?>
+
+                <span><p><?= $size['name_size'] ?></p></span> 
+                <?php } ?>
+                <!-- <span><p>M</p></span>
                 <span><p>L</p></span>
                 <span><p>XL</p></span>
-                <span><p>XXL</p></span>
+                <span><p>XXL</p></span> -->
             </div>
             <div class="quantity">
                 <p style="font-weight: bold;">Số lượng: </p>

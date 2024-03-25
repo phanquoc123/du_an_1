@@ -3,6 +3,8 @@ include 'header.php';
 include '../model/pdo.php';
 include '../model/danhmuc.php';
 include '../model/sanpham.php';
+include '../model/size.php';
+include '../model/color.php';
 
 
 
@@ -55,6 +57,75 @@ if(isset($_GET['act'])){
                 include 'danhmuc/list.php';
                 break;
  //////////////////// HỂT PHẦN DANH MỤC ////////////////////
+ /////////////////// MÀU /////////////////////////////
+ case 'list_color':
+    $list_color = show_color();
+    include 'color/list.php';
+    
+    break;
+    case 'add_color':
+        if(isset($_POST['btn_submit']) && $_POST['btn_submit']){
+             $image_color = $_FILES['image_color']['name'];
+             $targer_dir = "../upload/";
+            $targer_file = $targer_dir . basename($_FILES["image_color"]["name"]);
+             if (move_uploaded_file($_FILES["image_color"]["tmp_name"],$targer_file)) {
+             // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+           } else {
+           // echo "Sorry, there was an error uploading your file.";
+      }
+           add_color($image_color);
+        }
+        include 'color/add.php';
+        break;
+    case 'sua_color':
+        if(isset($_GET['id']) && ($_GET['id']) > 0){
+            $list_one_color  = show_one_color($_GET['id']);
+        }
+        
+        include 'color/update.php';
+        break; 
+
+    case 'update_color':
+        if(isset($_POST['btn_submit']) && ($_POST['btn_submit'])){
+            $id_color = $_POST['id_color'];
+            $image_color = $_FILES['image_color']['name'];
+             $targer_dir = "../upload/";
+            $targer_file = $targer_dir . basename($_FILES["image_color"]["name"]);
+             if (move_uploaded_file($_FILES["image_color"]["tmp_name"],$targer_file)) {
+             // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+           } else {
+           // echo "Sorry, there was an error uploading your file.";
+      }
+      update_color($image_color,$id_color);
+
+        }
+        $list_color = show_color();
+        include 'color/list.php';
+        break;
+
+    case 'delete_color':
+        if(isset($_GET['id']) && ($_GET['id']) > 0){
+            delete_color($_GET['id']);
+        }
+        $list_color = show_color();
+        include 'color/list.php';
+        break;
+ /////////////// HẾT MÀU //////////////////////
+ ///// SIZE //////////////
+ case 'list_size':
+    $list_size = show_size();
+    include 'size/list.php';
+    
+    break;
+
+    case 'delete_size':
+        if(isset($_GET['id']) && ($_GET['id']) > 0){
+            delete_size($_GET['id']);
+        }
+        $list_size = show_size();
+        include 'size/list.php';
+        break;
+
  /////////////////// PHẦN SẢN PHẨM //////////////////
              case 'list_sanpham':
                 $list_product = show_all_product();

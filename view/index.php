@@ -7,6 +7,9 @@ include 'header.php';
  
 include '../global.php';
 include '../model/sanpham.php';
+include '../model/color.php';
+include '../model/size.php';
+
 
 $sanpham_trangchu_Nam = show_all_sp_trangchu_Nam();
 $sanpham_trangchu_Tre_em = show_all_sp_trangchu_Tre_em();
@@ -33,9 +36,10 @@ if(isset($_GET['act'])){
                     //   $ma_hang=$_GET['id'];
                     $show_sanpham_chitiet = show_one_product($_GET['id']);
                     extract($show_sanpham_chitiet);
-                    
                     $show_sanpham_cungloai =show_san_pham_cung_loai($id_category);
-                    
+                    $list_size = show_size();
+                    $list_color = show_color();
+                   
                      include 'chitietsanpham.php';
                 }else{
                     include 'slide_show.php';
@@ -53,6 +57,16 @@ if(isset($_GET['act'])){
                     }
                     $product = search_product($search);
                     include 'timkiemsanpham.php';
+                    break;
+
+                case 'dangky':
+                        
+                    include 'dangky.php';
+                    break;
+
+                case 'dangnhap':
+                        
+                    include 'dangnhap.php';
                     break;
 
 

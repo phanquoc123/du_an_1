@@ -2,11 +2,8 @@
     <h4 class="td_sp">Đề xuất cho bạn</h4>
         <div class="header_sp">
             <button>Bán chạy nhất</button>
-            <button>Hàng mới vè</button>
-            <button>Áo</button>
-            <button>Bộ đồ nam</button>
-            <button>Đồ mặc trong</button>
-            <button>Phụ kiện</button>
+            <button>Hàng mới về</button>
+            
         </div>
 
         <div class="list_sp">

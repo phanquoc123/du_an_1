@@ -24,6 +24,7 @@
                             <span style="color:red;padding-right:9px"><?= $sanpham['price'] ?></span>
                             <span style="color:gray ;  text-decoration: line-through;">250.000đ</span>
                         </div>
+                        <span style="color: blue;"> Số lượng sản phẩm : <?= $sanpham['quantity'] ?></span> <br>
                         <span class="chay_hang">Sắp cháy hàng</span>
                     
                     </div>

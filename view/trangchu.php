@@ -10,7 +10,10 @@
       ?>
   
       <div class="product">
-      <a href="index.php?act=chitiet_sanpham&id=<?=$list_sp_Nam['id_product']?>"> <img src="<?= $hinh_hienthitrangchu ?>" alt=""> </a>
+        <div class="product_img">
+        <a href="index.php?act=chitiet_sanpham&id=<?=$list_sp_Nam['id_product']?>"> <img src="<?= $hinh_hienthitrangchu ?>" alt=""> </a>
+        </div>
+      <!-- <a href="index.php?act=chitiet_sanpham&id=<?=$list_sp_Nam['id_product']?>"> <img src="<?= $hinh_hienthitrangchu ?>" alt=""> </a> -->
       <h5><?= $list_sp_Nam['name_product'] ?></h5>
       <p style="color: red;"><?= $list_sp_Nam['price'] ?></p>
       <span class="chay_hang">Sắp cháy hàng</span>

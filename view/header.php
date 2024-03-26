@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,9 +54,31 @@
             <li><a href="">Blog</a></li> -->
             
             <li> <i class="fa-solid fa-cart-shopping"></i><a href="">Giỏ hàng</a></li>
-            <li>  <i class="fa-solid fa-user"></i><a href="index.php?act=dangky">Đăng ký</a> / <a href="index.php?act=dangnhap"> Đăng nhập</a></li>
+            <li><?php if(isset($_SESSION['dangnhap'])) { 
+                extract($_SESSION['dangnhap']);
+                 ?>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <?= isset($_SESSION['dangnhap']['user_name']) ? $_SESSION['dangnhap']['user_name'] : "" ?>
+  </button>
+  <ul class="dropdown-menu">
+   
+    <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
+    <li><a class="dropdown-item" href="index.php?act=thoat">Thoát</a></li>
+  </ul>
+</div>
+         <?php } else { ?> 
+            <li>  <i class="fa-solid fa-user"></i><a href="index.php?act=dangky">Đăng ký</a> / <a href="index.php?act=dangnhap"> Đăng nhập</a></li> 
+            <?php } ?> 
+            
+                
+            </li>
+            
+           
            </ul>
+           
          </div>
+         
         
         </div>
          

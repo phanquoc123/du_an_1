@@ -14,9 +14,12 @@ header{
     display: inline-block;
     list-style: none;
     padding-right: 50px;
-    padding-left: 70px;
+    padding-left: 40px;
     font-size: larger;
     
+}
+.dropdown button{
+   background-color: #EA66AC;
 }
 .list_danhmuc ul li a{
     text-decoration: none;
@@ -24,6 +27,7 @@ header{
     margin-bottom: 5px;
    position: relative;
 }
+
 .list_danhmuc ul li a::after {
     display: inline-block;
     width: 100%;

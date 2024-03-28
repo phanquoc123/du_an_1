@@ -84,9 +84,9 @@ if(isset($_GET['act'])){
                         if($user_name=="" && $phone=="" && $email=="" && $password==""){
                             $thongbao_loi = "Không được để trống";
                          }
-                          elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                        elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                                 $thongbao_loi = "Email không đúng định dạng";
-                            }
+                        }
                        
                         elseif(email_exist($email)){
                             $thongbao_loi = "Email đã tồn tại";
@@ -136,6 +136,33 @@ if(isset($_GET['act'])){
                         
                         include 'quenmatkhau.php';
                         break;
+
+                       case 'edit_taikhoan':
+                        if(isset($_POST['btn_submit']) && ($_POST['btn_submit'])){
+                            $user_name = $_POST['user_name'];
+                            $email = $_POST['email'];
+                            $password = $_POST['password'];
+                            $phone = $_POST['phone'];
+                            $id_user = $_POST['id_user'];
+
+                            if($user_name=="" && $email=="" && $password==""  && $phone=="")
+                            {
+                                $thongbao_loi = "Không được để trống";
+
+                             }
+                             else{
+
+                            update_taikhoan($id_user,$user_name,$password,$email,$phone);
+                            $_SESSION['dangnhap'] = check_taikhoan($email,$password);
+                            header("Location: index.php?act=edit_taikhoan");
+                            $thongbao= " Cập nhật thành công ";
+                             }
+                            
+
+                        }
+                        include 'edit_taikhoan.php';
+                        break;
+
                     case 'thoat':
                         session_unset();
                         header("Location: index.php");

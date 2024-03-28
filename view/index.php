@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../model/pdo.php';
 include '../model/danhmuc.php';
 $show_category_trangchu = show_all_category();            
@@ -9,6 +10,7 @@ include '../global.php';
 include '../model/sanpham.php';
 include '../model/color.php';
 include '../model/size.php';
+include '../model/user.php';
 
 
 $sanpham_trangchu_Nam = show_all_sp_trangchu_Nam();
@@ -60,14 +62,111 @@ if(isset($_GET['act'])){
                     break;
 
                 case 'dangky':
+                   
+                    if(isset($_POST['btn_submit']) && ($_POST['btn_submit'])){
+                        $user_name = $_POST['user_name'];
+                        $phone = $_POST['phone'];
+                        $email = $_POST['email'];
+                        $password = $_POST['password'];
+
+                        // if($user_name =""){
+                        //     $loi_username = "Không được để trống";
+                        // }elseif($phone=""){
+                        //     $loi_phone = "Không được để trống";
+                        // }elseif($email=""){
+                        //   $loi_email = "Không được để trống";
+                        // }elseif($password=""){
+                        //     $loi_password = "Không được để trống";
+                        // }else{
+                        //     $thong_bao = "Đăng ký thành công";
+                        //     add_user($user_name,$password,$email,$phone);
+                        // }
+                        if($user_name=="" && $phone=="" && $email=="" && $password==""){
+                            $thongbao_loi = "Không được để trống";
+                         }
+                        elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                                $thongbao_loi = "Email không đúng định dạng";
+                        }
+                       
+                        elseif(email_exist($email)){
+                            $thongbao_loi = "Email đã tồn tại";
+                        }
+                        else{
+                            add_user($user_name, $password, $email, $phone);
+                            $thongbao="Đăng ký thành công";
+                        }
                         
+                        
+                       
+
+                    }    
+
                     include 'dangky.php';
                     break;
 
                 case 'dangnhap':
-                        
+                    if(isset($_POST['btn_submit']) && $_POST['btn_submit']){
+                        $email = $_POST['email'];
+                        $password = $_POST['password'];
+                        $check_dangnhap = check_taikhoan($email,$password);
+                        if(is_array($check_dangnhap)){
+                            $_SESSION['dangnhap'] = $check_dangnhap;
+                            header("Location: index.php");
+                        }else{
+                            $thongbao_loi = "Đăng nhập không thành công! Vui lòng kiểm tra lại";
+                        }
+                    }
                     include 'dangnhap.php';
                     break;
+
+                    case 'quenmatkhau':
+                        if(isset($_POST['btn_submit']) && ($_POST['btn_submit'])){
+                           $email = $_POST['email'];
+                           
+                           $check_email=check_email($email);
+                           if(is_array($check_email)){
+                            $thongbao_quenmk = "Mật khẩu của bạn là".$check_email['password'];
+                        
+                         }else{
+                            $thongbao_quenmk_loi = "Email không tồn tại ! Vui lòng kiểm tra lại";
+                        
+                         }
+                          
+                        }
+                        
+                        include 'quenmatkhau.php';
+                        break;
+
+                       case 'edit_taikhoan':
+                        if(isset($_POST['btn_submit']) && ($_POST['btn_submit'])){
+                            $user_name = $_POST['user_name'];
+                            $email = $_POST['email'];
+                            $password = $_POST['password'];
+                            $phone = $_POST['phone'];
+                            $id_user = $_POST['id_user'];
+
+                            if( $user_name== "" && $email== "" && $password== ""  && $phone== "" )
+                            {
+                                $thongbao_loi = "Không được để trống";
+
+                             }
+                             else{
+
+                            update_taikhoan($id_user,$user_name,$password,$email,$phone);
+                            $_SESSION['dangnhap'] = check_taikhoan($email,$password);
+                            header("Location: index.php?act=edit_taikhoan");
+                            $thongbao= " Cập nhật thành công ";
+                             }
+                            
+
+                        }
+                        include 'edit_taikhoan.php';
+                        break;
+
+                    case 'thoat':
+                        session_unset();
+                        header("Location: index.php");
+                        break;
 
 
        default:

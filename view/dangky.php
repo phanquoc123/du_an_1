@@ -3,31 +3,43 @@
 <div class="all">
     <div class="container">
         <div id="wrapper">
-            <form action="" id="form-login">
+            <form action="index.php?act=dangky" method="post" id="form-login">
                 <h1 class="form-heading">
                     <span class="page-signup-title page-signup-title-darkblue">ĐĂNG</span>
                     <span class="page-signup-title page-signup-title-yellow">KÝ</span>
                 </h1>
                 <div class="form-group">
                     <i class="far fa-user"></i>
-                    <input type="name" class="form-input" placeholder="Họ vè tên" required>
+                    <input type="text" class="form-input" name="user_name" placeholder="Họ và tên" >
+                     
                 </div>
                 <div class="form-group">
                     <i class="far fa-user"></i>
-                    <input type="phone" class="form-input" placeholder="Số điện thoại" required>
+                    <input type="tel" class="form-input" name="phone" placeholder="Số điện thoại" >
+                 
                 </div>
                 <div class="form-group">
                     <i class="far fa-user"></i>
-                    <input type="email" class="form-input" placeholder="Tài khoản email" required>
+                    <input type="text" class="form-input" name="email" placeholder="Tài khoản email" >
+                   
                 </div>
                 <div class="form-group">
                     <i class="fas fa-key"></i>
-                    <input type="password" class="form-input" placeholder="Mật khẩu"required>
+                    <input type="password" class="form-input" name="password" placeholder="Mật khẩu" >
+                  
                     <div id="eye">
                         <i class="far fa-eye"></i>
                     </div>
                 </div>
-                <input type="submit" value="Đăng nhập" class="form-submit">
+                <input type="submit" value="Đăng ký" name="btn_submit" class="form-submit">
+                <?php
+    if(isset($thongbao) && $thongbao!=""){
+        echo "<p style='color: green; text-align: center'>$thongbao</p>";
+    }
+    if(isset($thongbao_loi) && $thongbao_loi!=""){
+        echo "<p style='color: red; text-align: center'>$thongbao_loi</p>";
+    }
+    ?>
                 <h6>Hoặc đăng kí bằng</h6>
                 <div class="d-flex justify-content-center page-signup-social-wrapper">
             
@@ -39,11 +51,12 @@
                     </div>
                     </div>
                 <div class="register">
-                Bạn đã có tài khoản? <a href="">Đăng nhập ngay!</a>
+                Bạn đã có tài khoản? <a href="index.php?act=dangnhap">Đăng nhập ngay!</a>
                 </div>
         
 
             </form>
+            
         </div>
     </div>
         

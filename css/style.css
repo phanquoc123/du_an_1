@@ -19,7 +19,9 @@ header{
     
 }
 .dropdown button{
-   background-color: #EA66AC;
+   background-color: #FFBFB1;
+   border: none;
+   outline: none;
 }
 .list_danhmuc ul li a{
     text-decoration: none;

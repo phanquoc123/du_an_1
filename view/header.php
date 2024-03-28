@@ -59,11 +59,13 @@
                  ?>
          <div class="dropdown">
          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+             <img src="../img/hansohee.jpg" style="border-radius: 50px;" width="30" height="30" alt="">
             <?= isset($_SESSION['dangnhap']['user_name']) ? $_SESSION['dangnhap']['user_name'] : "" ?>
+           
          </button>
             <ul class="dropdown-menu">
    
-              <li><a class="dropdown-item" href="index.php?act=edit_taikhoan">Đổi mật khẩu</a></li>
+              <li><a class="dropdown-item" href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a></li>
               <li><a class="dropdown-item" href="index.php?act=thoat">Thoát</a></li>
             </ul>
         </div>

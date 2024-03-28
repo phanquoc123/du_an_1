@@ -145,7 +145,7 @@ if(isset($_GET['act'])){
                             $phone = $_POST['phone'];
                             $id_user = $_POST['id_user'];
 
-                            if($user_name=="" && $email=="" && $password==""  && $phone=="")
+                            if( $user_name== "" && $email== "" && $password== ""  && $phone== "" )
                             {
                                 $thongbao_loi = "Không được để trống";
 
